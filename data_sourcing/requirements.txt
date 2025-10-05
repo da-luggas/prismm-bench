@@ -1,0 +1,9 @@
+openreview-py
+python-dotenv
+openai
+tqdm
+pydantic
+PyMuPDF
+pillow
+google-genai
+pdf2image

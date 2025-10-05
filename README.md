@@ -18,13 +18,12 @@ See [annotation_app/README.md](annotation_app/README.md)
 
 ### Data Sourcing
 
-- This is a collection of scripts and tools we used for data collection and preprocessing.
-- They are in order of processing.
+See [data_sourcing/README.md](data_sourcing/README.md)
 
 ### Evaluation Framework
 
-- See [evaluation_framework/README.md](evaluation_framework/README.md)
+See [evaluation_framework/README.md](evaluation_framework/README.md)
 
 ### Survey Application
 
-- See [survey_app/README.md](survey_app/README.md)
+See [survey_app/README.md](survey_app/README.md)

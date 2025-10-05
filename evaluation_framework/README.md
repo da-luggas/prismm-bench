@@ -21,20 +21,6 @@ To run the evaluation benchmark with a single model:
 python inference.py --model <model_name>
 ```
 
-### Example
-
-Using the default LLaVA model:
-
-```bash
-python inference.py
-```
-
-Or specify a different model:
-
-```bash
-python inference.py --model "your-model-name"
-```
-
 The script will run MCQ inference across different configurations:
 
 - Default questions with/without context
@@ -52,4 +38,25 @@ Results will be saved in the responses list within the provider.
 
 ## Supported Models
 
-The framework is designed for multimodal models like LLaVA. Other providers (OpenAI, Gemini) are available but require API keys in a `.env` file.
+The framework supports the following multimodal models via vLLM:
+
+- `llava-hf/llava-onevision-qwen2-7b-ov-hf`
+- `llava-hf/llava-onevision-qwen2-72b-ov-hf`
+- `Qwen/Qwen2.5-VL-72B-Instruct`
+- `Qwen/Qwen2.5-VL-32B-Instruct`
+- `Qwen/Qwen2.5-VL-7B-Instruct`
+- `OpenGVLab/InternVL3-8B-Instruct`
+- `OpenGVLab/InternVL3-38B-Instruct`
+- `OpenGVLab/InternVL3-78B-Instruct`
+- `OpenGVLab/InternVL3_5-8B`
+- `OpenGVLab/InternVL3_5-38B`
+- `internlm/internlm-xcomposer2d5-7b`
+- `internlm/internlm-xcomposer2-4khd-7b`
+- `zai-org/GLM-4.5V-FP8`
+- `AIDC-AI/Ovis2-34B`
+- `AIDC-AI/Ovis2-8B`
+- `google/gemma-3-4b-it`
+- `google/gemma-3-27b-it`
+- `google/gemma-3-12b-it`
+
+**Note:** The `openai_batch` and `gemini_batch` implementations are experimental only and require API keys in a `.env` file.

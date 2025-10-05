@@ -16,8 +16,7 @@ A web application for conducting surveys on human performance in identifying inc
 
 Create a `.env.local` file in the root directory with the following variables:
 
-\`\`\`env
-
+```env
 # Question Type Configuration (optional, defaults to "default")
 
 NEXT_PUBLIC_QUESTION_TYPE=default
@@ -27,7 +26,7 @@ NEXT_PUBLIC_QUESTION_TYPE=default
 GOOGLE_SHEETS_CLIENT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
 GOOGLE_SHEETS_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYour private key here\n-----END PRIVATE KEY-----\n"
 GOOGLE_SHEETS_SPREADSHEET_ID=your-spreadsheet-id-here
-\`\`\`
+```
 
 ### 2. Google Sheets Setup
 
@@ -71,7 +70,7 @@ Configure the survey behavior using the `NEXT_PUBLIC_QUESTION_TYPE` environment 
 
 The app expects annotation data in `data/annotations.json` with the following structure:
 
-\`\`\`json
+```json
 {
 "paper_id": [
 {
@@ -96,7 +95,7 @@ The app expects annotation data in `data/annotations.json` with the following st
 }
 ]
 }
-\`\`\`
+```
 
 ### 5. Image Assets
 
@@ -104,8 +103,7 @@ Place corresponding images in a `public/images/` directory with filenames matchi
 
 ## Development
 
-\`\`\`bash
-
+```bash
 # Install dependencies
 
 npm install
@@ -118,7 +116,7 @@ npm run dev
 
 npm run build
 npm start
-\`\`\`
+```
 
 ## Data Collection
 

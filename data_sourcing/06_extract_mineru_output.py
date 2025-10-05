@@ -6,7 +6,7 @@ from tqdm import tqdm
 import argparse
 
 def extract_figures_tables(
-    mineru_dir="mineru_output", pdf_dir="pdf", output_dir="extracted_new", dpi=144
+    mineru_dir="mineru_output", pdf_dir="pdf", output_dir="suppl_images", dpi=144
 ):
     """
     Extract figures, tables, and equations from PDFs based on mineru_output JSON metadata.
@@ -196,7 +196,7 @@ def main():
     parser = argparse.ArgumentParser(description="Extract figures and tables from MinerU output")
     parser.add_argument("--mineru-dir", default=os.getenv("MINERU_DIR", "mineru_output"), help="Directory containing MinerU output")
     parser.add_argument("--pdf-dir", default=os.getenv("PDF_DIR", "pdf"), help="Directory containing PDF files")
-    parser.add_argument("--output-dir", default=os.getenv("OUTPUT_DIR", "extracted_new"), help="Output directory for extracted images")
+    parser.add_argument("--output-dir", default=os.getenv("OUTPUT_DIR", "suppl_images"), help="Output directory for extracted images")
     parser.add_argument("--dpi", type=int, default=int(os.getenv("DPI", "144")), help="DPI for image extraction")
     
     args = parser.parse_args()

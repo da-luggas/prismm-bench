@@ -12,20 +12,6 @@ A web-based application for annotating visual and textual inconsistencies in sci
 - **Export Results**: Download annotated data in JSON format
 - **Responsive Design**: Works on desktop and mobile devices
 
-## Tech Stack
-
-### Frontend
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - Modern UI component library
-- **Lucide React** - Icon library
-
-### Backend
-- **FastAPI** - Python web framework for API endpoints
-- **PyMuPDF (fitz)** - PDF processing and image extraction
-- **httpx** - HTTP client for fetching PDFs from OpenReview
-
 ## Installation
 
 ### Prerequisites
@@ -36,53 +22,41 @@ A web-based application for annotating visual and textual inconsistencies in sci
 ### Frontend Setup
 
 1. Clone the repository:
-\`\`\`bash
+```bash
 git clone <repository-url>
 cd paper-annotation-app
-\`\`\`
+```
 
 2. Install Node.js dependencies:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. Start the development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 The frontend will be available at `http://localhost:3000`
 
 ### Backend Setup
 
 1. Navigate to the API directory:
-\`\`\`bash
+```bash
 cd app/api
-\`\`\`
+```
 
 2. Install Python dependencies:
-\`\`\`bash
+```bash
 pip install fastapi uvicorn PyMuPDF httpx python-multipart
-\`\`\`
+```
 
 3. Start the FastAPI server:
-\`\`\`bash
+```bash
 uvicorn main:app --host 0.0.0.0 --port 8080 --reload
-\`\`\`
+```
 
 The API will be available at `http://localhost:8080`
-
-### Alternative: Using the Setup Scripts
-
-Run the provided setup scripts to install dependencies automatically:
-
-\`\`\`bash
-# For PDF processing setup
-node scripts/pdf-converter.js
-
-# For Python environment setup
-python scripts/setup_pdf_processing.py
-\`\`\`
 
 ## Usage
 
@@ -90,7 +64,7 @@ python scripts/setup_pdf_processing.py
 
 Create a JSON file with the following structure:
 
-\`\`\`json
+```json
 {
   "paper_id_1": [
     {
@@ -109,7 +83,7 @@ Create a JSON file with the following structure:
     }
   ]
 }
-\`\`\`
+```
 
 ### 2. Start Annotation
 
@@ -192,36 +166,6 @@ Removes cached PDF files for a specific paper.
 
 **Response:** Success/error message
 
-## File Structure
-
-\`\`\`
-paper-annotation-app/
-├── app/
-│   ├── api/
-│   │   ├── main.py              # FastAPI backend
-│   │   └── requirements.txt     # Python dependencies
-│   ├── globals.css              # Global styles
-│   ├── layout.tsx               # Root layout
-│   └── page.tsx                 # Main application page
-├── components/
-│   ├── ui/                      # shadcn/ui components
-│   ├── annotation-interface.tsx # Main annotation interface
-│   ├── image-cropper.tsx        # Image cropping component
-│   └── inconsistency-panel.tsx  # Individual inconsistency panel
-├── hooks/
-│   ├── use-mobile.tsx           # Mobile detection hook
-│   └── use-toast.ts             # Toast notification hook
-├── lib/
-│   └── utils.ts                 # Utility functions
-├── scripts/
-│   ├── pdf-converter.js         # PDF processing setup
-│   └── setup_pdf_processing.py # Python environment setup
-├── next.config.mjs              # Next.js configuration
-├── tailwind.config.ts           # Tailwind CSS configuration
-├── package.json                 # Node.js dependencies
-└── README.md                    # This file
-\`\`\`
-
 ## Configuration
 
 ### Environment Variables
@@ -234,46 +178,4 @@ The application supports the following environment variables:
 
 The backend automatically downloads and caches PDF files from OpenReview. Cached files are stored in the system's temporary directory under `openreview_pdfs/`.
 
-## Troubleshooting
 
-### Common Issues
-
-1. **PDF not loading**: Ensure the paper ID is correct and the paper is publicly available on OpenReview
-2. **Image cropping not working**: Check that the backend is running and accessible
-3. **Progress not saving**: Verify localStorage is enabled in your browser
-4. **CORS errors**: Ensure both frontend and backend are running on the specified ports
-
-### Backend Issues
-
-1. **PyMuPDF installation**: On some systems, you may need to install additional dependencies:
-   \`\`\`bash
-   # Ubuntu/Debian
-   sudo apt-get install python3-dev
-
-   # macOS
-   brew install python3
-   \`\`\`
-
-2. **Port conflicts**: If port 8080 is in use, modify the uvicorn command:
-   \`\`\`bash
-   uvicorn main:app --host 0.0.0.0 --port 8081 --reload
-   \`\`\`
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and commit: `git commit -am 'Add feature'`
-4. Push to the branch: `git push origin feature-name`
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with [Next.js](https://nextjs.org/) and [FastAPI](https://fastapi.tiangolo.com/)
-- UI components from [shadcn/ui](https://ui.shadcn.com/)
-- PDF processing powered by [PyMuPDF](https://pymupdf.readthedocs.io/)
-- Icons from [Lucide](https://lucide.dev/)
