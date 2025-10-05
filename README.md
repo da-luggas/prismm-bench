@@ -1,4 +1,4 @@
-# PRISMM-Bench: A Benchmark of Peer-Review Gronuded Multimodal Inconsistencies
+# PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies
 
 ## Supplementary Material
 
