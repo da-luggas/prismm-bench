@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies."
+    />
+    <meta
+      name="keywords"
+      content="PRISMM-Bench, multimodal inconsistencies, peer review"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal
+      Inconsistencies
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.ico" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script defer src="https://umami.selch.dev/script.js" data-website-id="4abc0a05-d161-427c-9a9f-afc09d3e2d66"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal
+                Inconsistencies
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  ><strong>Lukas Selch</strong><sup>1</sup>,</span
+                >
+                <span class="author-block"
+                  ><strong>Yufang Hou</strong><sup>2</sup>,</span
+                >
+                <span class="author-block"
+                  ><strong>M. Jehanzeb Mirza</strong><sup>3</sup>,</span
+                >
+                <span class="author-block"
+                  ><strong>Sivan Doveh</strong><sup>4</sup>,</span
+                >
+                <span class="author-block"
+                  ><strong>James Glass</strong><sup>3</sup>,</span
+                >
+                <span class="author-block"
+                  ><strong>Rogerio Feris</strong><sup>5</sup>,</span
+                >
+                <span class="author-block"
+                  ><strong>Wei Lin</strong><sup>†1</sup></span
+                >
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  ><sup>1</sup>Johannes Kepler University Linz,</span
+                >
+                <span class="author-block"
+                  ><sup>2</sup>Interdisciplinary Transformation University
+                  Austria,</span
+                >
+                <span class="author-block"><sup>3</sup>MIT CSAIL,</span>
+                <span class="author-block"
+                  ><sup>4</sup>Stanford University,</span
+                >
+                <span class="author-block"
+                  ><sup>5</sup>MIT-IBM Watson AI Lab</span
+                >
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/pdf/2510.16505"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-alt"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2510.16505"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/da-luggas/prismm-bench"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://huggingface.co/datasets/daluggas/PRISMM-Bench"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/EvolvingLMMs-Lab/lmms-eval/tree/main/lmms_eval/tasks/prismm_bench"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fa-solid fa-gauge-simple-high"></i>
+                      </span>
+                      <span>lmms-eval</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/teaser_wei.svg" />
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">PRISMM-Bench</span> — benchmarking organic, long-context multimodal inconsistencies.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Large Multimodal Models (LMMs) are increasingly applied to
+                scientific research, yet it remains unclear whether they can
+                reliably understand and reason over the multimodal complexity of
+                papers. A central challenge lies in detecting and resolving
+                inconsistencies across text, figures, tables, and equations,
+                issues that are often subtle, domain-specific, and ultimately
+                undermine clarity, reproducibility, and trust. Existing
+                benchmarks overlook this issue, either isolating single
+                modalities or relying on synthetic errors that fail to capture
+                real-world complexity.
+              </p>
+              <p>
+                We introduce <span class='dnerf'>PRISMM-Bench</span> (Peer-Review-sourced Inconsistency Set
+                for Multimodal Models), the first benchmark grounded in real
+                reviewer-flagged inconsistencies in scientific papers. Through a
+                multi-stage pipeline of review mining, LLM-assisted filtering
+                and human verification, we curate 384 inconsistencies from 353
+                papers. Based on this set, we design three tasks, namely
+                inconsistency identification, remedy and pair matching, which
+                assess a model's capacity to detect, correct, and reason over
+                inconsistencies across different modalities.
+              </p>
+              <p>
+                Furthermore, to address the notorious problem of choice-only
+                shortcuts in multiple-choice evaluation, where models exploit
+                answer patterns without truly understanding the question, we
+                further introduce structured JSON-based answer representations
+                that minimize linguistic biases by reducing reliance on
+                superficial stylistic cues. We benchmark 21 leading LMMs,
+                including large open-weight models (GLM-4.5V 106B, InternVL3
+                78B) and proprietary models (Gemini 2.5 Pro, GPT-5 with high
+                reasoning). Results reveal strikingly low performance
+                (27.8-53.9%), underscoring the challenge of multimodal
+                scientific reasoning and motivating progress towards trustworthy
+                scientific assistants. We provide the source code and dataset
+                viewer in the appendix, and will release the full source code,
+                dataset, and annotation tool publicly upon acceptance.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method Overview</h2>
+              <img src="./static/images/pipeline_wei.svg" />
+          </div>
+        </div>
+        <!--/ Paper video. -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+
+        <!-- Examples. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Qualitative Examples</h2>
+
+            <div class="columns is-centered">
+              <div class="column is-full">
+                <h3 class="title is-4">Table vs. Text Inconsistency</h3>
+                  <figure class="image">
+                    <img src="./static/images/qualitative_example_table_text_inconsistency.svg" alt="Table vs Text inconsistency" />
+                  </figure>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="columns is-centered">
+              <div class="column is-full">
+                <h3 class="title is-4">Figure vs. Equation Inconsistency</h3>
+                  <figure class="image">
+                    <img src="./static/images/qualitative_example_figure_equation_inconsistency.svg" alt="Figure vs Equation inconsistency" />
+                  </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Examples. -->
+
+        <!-- Concurrent Work.
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Related Links</h2>
+
+            <div class="content has-text-justified">
+              <p>
+                There's a lot of excellent work that was introduced around the
+                same time as ours.
+              </p>
+              <p>
+                <a href="https://arxiv.org/abs/2104.09125"
+                  >Progressive Encoding for Neural Optimization</a
+                >
+                introduces an idea similar to our windowed position encoding for
+                coarse-to-fine optimization.
+              </p>
+              <p>
+                <a
+                  href="https://www.albertpumarola.com/research/D-NeRF/index.html"
+                  >D-NeRF</a
+                >
+                and
+                <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/"
+                  >NR-NeRF</a
+                >
+                both use deformation fields to model non-rigid scenes.
+              </p>
+              <p>
+                Some works model videos with a NeRF by directly modulating the
+                density, such as
+                <a href="https://video-nerf.github.io/">Video-NeRF</a>,
+                <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and
+                <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+              </p>
+              <p>
+                There are probably many more by the time you are reading this.
+                Check out
+                <a href="https://dellaert.github.io/NeRF/"
+                  >Frank Dellart's survey on recent NeRF papers</a
+                >, and
+                <a href="https://github.com/yenchenlin/awesome-NeRF"
+                  >Yen-Chen Lin's curated list of NeRF papers</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div> -->
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{selch2026prismm,
+  author    = {Selch, Lukas and Hou, Yufang and Mirza, M. Jehanzeb and Doveh, Sivan and Glass, James and Feris, Rogerio and Lin, Wei},
+  title     = {PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies},
+  journal   = {ICLR},
+  year      = {2026},
+}</code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="https://arxiv.org/pdf/2510.16505">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a
+            class="icon-link"
+            href="https://github.com/da-luggas/prismm-bench"
+            class="external-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+              <p>
+                This means you are free to borrow the
+                <a href="https://github.com/da-luggas/prismm-bench"
+                  >source code</a
+                >
+                of this website, we just ask that you link back to this page in
+                the footer. Please remember to remove the analytics code
+                included in the header of the website which you do not want on
+                your website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
