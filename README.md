@@ -32,9 +32,7 @@ We introduce PRISMM-Bench (Peer-Review-sourced Inconsistency Set for Multimodal 
 
 Furthermore, to address the notorious problem of choice-only shortcuts in multiple-choice evaluation, where models exploit answer patterns without truly understanding the question, we further introduce structured JSON-based answer representations that minimize linguistic biases by reducing reliance on superficial stylistic cues. We benchmark 21 leading LMMs, including large open-weight models (GLM-4.5V 106B, InternVL3 78B) and proprietary models (Gemini 2.5 Pro, GPT-5 with high reasoning). Results reveal strikingly low performance (27.8-53.9%), underscoring the challenge of multimodal scientific reasoning and motivating progress towards trustworthy scientific assistants. We provide the source code and dataset viewer in the appendix, and will release the full source code, dataset, and annotation tool publicly upon acceptance.
   </p>
-  <a href="">
-    <img src="assets/teaser.png" alt="Teaser" width="100%">
-  </a>
+  <img src="docs/static/images/pipeline_wei.svg" alt="Teaser" width="100%" style="background-color: white; padding: 10px;">
 <br>
 
 ## Using the Benchmark ✅
