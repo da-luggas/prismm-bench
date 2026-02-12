@@ -37,6 +37,7 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+    <script src="./static/js/dataset_viewer.js"></script>
     <script defer src="https://umami.selch.dev/script.js" data-website-id="4abc0a05-d161-427c-9a9f-afc09d3e2d66"></script>
   </head>
   <body>
@@ -231,34 +232,52 @@
         <div class="columns is-centered">
 
         <!-- Examples. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-3">Qualitative Examples</h2>
+        <!--/ Examples. -->
 
-            <div class="columns is-centered">
-              <div class="column is-full">
-                <h3 class="title is-4">Table vs. Text Inconsistency</h3>
-                  <figure class="image">
-                    <img src="./static/images/qualitative_example_table_text_inconsistency.svg" alt="Table vs Text inconsistency" />
-                    <figcaption class="has-text-centered is-size-6" role="note">A qualitative example of a text–table inconsistency and its corresponding evaluation tasks of Ident, Remedy and Match.</figcaption>
-                  </figure>
+        <!-- Dataset Viewer. -->
+        <div class="columns is-centered has-text-centered" style="width: 100%;">
+          <div class="column is-full">
+            <hr>
+            <h2 class="title is-3">Dataset Viewer</h2>
+            <div id="dataset-viewer" class="box" style="text-align: left;">
+              
+              <div class="tabs is-centered is-toggle is-fullwidth">
+                <ul>
+                  <li class="viewer-tab is-active" data-mode="default_natural"><a>Identification (NL)</a></li>
+                  <li class="viewer-tab" data-mode="default"><a>Identification (JSON)</a></li>
+                  <li class="viewer-tab" data-mode="edit"><a>Remedy (JSON)</a></li>
+                </ul>
               </div>
-            </div>
 
-            <hr />
-
-            <div class="columns is-centered">
-              <div class="column is-full">
-                <h3 class="title is-4">Figure vs. Equation Inconsistency</h3>
-                  <figure class="image">
-                    <img src="./static/images/qualitative_example_figure_equation_inconsistency.svg" alt="Figure vs Equation inconsistency" />
-                    <figcaption class="has-text-centered is-size-6" role="note">A qualitative example of a figure-equation inconsistency and its corresponding evaluation tasks of Ident, Remedy and Match.</figcaption>
-                  </figure>
+              <div id="viewer-content-body" style="min-height: 300px;">
+                <!-- Content goes here -->
+                <div class="has-text-centered p-6">
+                    <span class="icon is-large">
+                        <i class="fas fa-spinner fa-pulse fa-3x"></i>
+                    </span>
+                    <p>Loading dataset...</p>
+                </div>
               </div>
+
+              <hr>
+
+              <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                <a class="pagination-previous" id="prev-btn">Previous</a>
+                <a class="pagination-next" id="next-btn">Next</a>
+                <ul class="pagination-list" style="align-items: center;">
+                  <li>
+                    <input class="input" type="number" id="page-input" min="1" value="1" style="width: 80px; text-align: center; margin-right: 0.5rem;">
+                  </li>
+                  <li>
+                    <span id="total-pages" class="is-size-5">/ ...</span>
+                  </li>
+                </ul>
+              </nav>
+
             </div>
           </div>
         </div>
-        <!--/ Examples. -->
+        <!--/ Dataset Viewer. -->
 
         <!-- Concurrent Work.
         <div class="columns is-centered">
