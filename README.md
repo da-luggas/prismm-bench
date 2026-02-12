@@ -1,13 +1,13 @@
 <div align="center">
   <h1>PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies</h1>
   <p>
-    <a href="https://github.com/da-luggas"><strong>Lukas Selch</strong></a><sup>1</sup> &nbsp; · &nbsp;
-    <a href="https://github.com/yufanghou"><strong>Yufang Hou</strong></a><sup>2</sup> &nbsp; · &nbsp;
-    <a href="https://github.com/jmiemirza"><strong>M. Jehanzeb Mirza</strong></a><sup>3</sup> &nbsp; · &nbsp;
-    <a href="https://github.com/sivandoveh"><strong>Sivan Doveh</strong></a><sup>4</sup> &nbsp; · &nbsp;
-    <strong>James Glass</strong><sup>3</sup> &nbsp; · &nbsp;
-    <strong>Rogerio Feris</strong><sup>5</sup> &nbsp; · &nbsp;
-    <a href="https://github.com/wlin-at"><strong>Wei Lin</strong></a><sup>1</sup>
+    <a href="https://selch.dev"><strong>Lukas Selch</strong></a><sup>1</sup> &nbsp; · &nbsp;
+    <a href="https://yufanghou.github.io/"><strong>Yufang Hou</strong></a><sup>2</sup> &nbsp; · &nbsp;
+    <a href="https://jmiemirza.github.io/"><strong>M. Jehanzeb Mirza</strong></a><sup>3</sup> &nbsp; · &nbsp;
+    <a href="https://sivandoveh.github.io/"><strong>Sivan Doveh</strong></a><sup>4</sup> &nbsp; · &nbsp;
+    <a href="https://www.csail.mit.edu/person/jim-glass"><strong>James Glass</strong></a><sup>3</sup> &nbsp; · &nbsp;
+    <a href="https://www.rogerioferis.org/"><strong>Rogerio Feris</strong></a><sup>5</sup> &nbsp; · &nbsp;
+    <a href="https://wlin-at.github.io/"><strong>Wei Lin</strong></a><sup>1</sup>
   </p>
   <p style="font-style:italic; font-size:small; margin-top:0.25rem;">
     <sup>1</sup> Johannes Kepler University Linz &nbsp;&nbsp;
